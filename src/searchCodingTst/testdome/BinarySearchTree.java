@@ -14,12 +14,18 @@ class Node {
 public class BinarySearchTree {
 	public static boolean contains(Node root, int value) {
 		
-		boolean result = false;
+		if( root == null ) {
+			return false;
+		}
+		if(root.value == value) {
+			return true;
+		}
 		
-		//bfs
+		if(root.value < value )
+			return contains(root.left, value);
+		else
+			return contains(root.right, value);
 		
-		
-		return result;
 	}
 
 	public static void main(String[] args) {
@@ -27,6 +33,6 @@ public class BinarySearchTree {
 		Node n3 = new Node(3, null, null);
 		Node n2 = new Node(2, n1, n3);
 
-		System.out.println();
+        System.out.println(contains(n2, 0));
 	}
 }
