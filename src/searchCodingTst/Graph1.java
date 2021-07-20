@@ -2,7 +2,7 @@ package searchCodingTst;
 
 import java.util.Arrays;
 
-public class Graph {
+public class Graph1 {
 
 	//1. 배열에 결과저장
 	//2. 추가로 경로가 잇는지를 확인하여 저장( i -> k -> j = i가 j에 승리함 )
@@ -18,7 +18,7 @@ public class Graph {
    	 	for( int i= 0; i < results.length; i++) {
    	 		calcResult[results[i][0]-1][results[i][1]-1] = true;
    	 	}
-   	 	//2. 배열에 추가 결과저장 ( i -> k -> j = i가 j에 승리함 )
+   	 	//2. 배열에 추가 결과저장 ( j -> i -> k = i가 j에 승리함 )
    	 	for( int i = 0; i < calcResult.length; i++) {
 	   	 	for( int j = 0; j < calcResult.length; j++) {
 	   	 		for( int k = 0; k < calcResult.length;k++) {

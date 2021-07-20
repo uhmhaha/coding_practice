@@ -16,7 +16,7 @@ public class MergeSort {
 		int midIdx = -1;
 		
 		if(sIdx < eIdx) {
-			midIdx = (sIdx + eIdx) /2;
+ 			midIdx = (sIdx + eIdx) /2;
 			mergeSort(arr, sIdx, midIdx);
 			mergeSort(arr, midIdx+1, eIdx);
 			merge(arr, sIdx, midIdx, eIdx);
